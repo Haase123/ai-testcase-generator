@@ -221,3 +221,56 @@ npm run dev
 The frontend will be available at the URL shown by Vite, usually:
 
 http://localhost:5173
+
+
+## Testing
+
+The backend is tested using 'pytest'.
+
+To run the test suite:
+
+cd backend
+pytest
+
+The tests cover core application functionality including:
+
+Test case generation
+Requirement analysis
+API endpoints
+AI/fallback behavior
+Error handling
+Data export
+Status/health checks
+
+
+## Continous Integration
+
+The project uses GitHub Actions for continuous integration.
+
+On every push to the `main` branch and on pull requests, the CI pipeline:
+
+1. Installs the required Python dependencies.
+2. Runs the backend test suite with `pytest`.
+3. Installs the frontend dependencies.
+4. Builds the React frontend.
+
+This helps ensure that changes do not introduce failing tests or frontend build errors.
+
+
+## Future Improvements
+
+Possible future improvements include:
+
+- Support for additional AI providers and local language models
+- Integration with external issue tracking and test management systems
+- Persistent deployment using a production database
+- Extended automated test coverage
+
+
+## Author
+
+Lasse Haase
+
+Bachelor of Science in Computer Science
+
+GitHub: Haase123
