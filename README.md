@@ -142,7 +142,7 @@ The frontend indicates whether the generated result was produced using the OpenA
 
 ## Project Structure
 
-'''text
+```text
 ai-testcase-generator/
 ├── .github/
 │   └── workflows/
@@ -176,7 +176,7 @@ ai-testcase-generator/
 ├── .gitignore
 ├── README.md
 └── ...
-'''
+```
 
 
 ## Setup
