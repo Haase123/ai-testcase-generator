@@ -170,11 +170,11 @@ ai-testcase-generator/
 │   │   ├── services/
 │   │   ├── types/
 │   │   └── ...
+│   │
 │   ├── public/
 │   ├── package.json
 │   └── package-lock.json
 │
-├── .env
 ├── .gitignore
 ├── README.md
 └── ...
@@ -198,13 +198,15 @@ cd ai-testcase-generator
 
 ### Backend
 
-Create and activate a virtual enviroment:
+Create a virtual enviroment:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the virtual enviroment and install the backend dependencies:
+Activate the virtual enviroment according to your operating system.
+
+Install the backend dependencies:
 
 ```bash
 cd backend
@@ -262,7 +264,7 @@ The tests cover core application functionality including:
 - Status/health checks
 
 
-## Continous Integration
+## Continuous Integration
 
 The project uses GitHub Actions for continuous integration.
 
