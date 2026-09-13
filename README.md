@@ -134,7 +134,9 @@ The application supports optional OpenAI integration for enhanced natural-langua
 
 To enable the AI integration, create a `.env` file in the project root and add your API key:
 
+```env
 OPENAI_API_KEY=your_api_key
+```
 
 The OpenAI API is optional. If no API key is configured, the API is unavailable, or the account has no available credits, the application automatically falls back to the built-in rule-based test generation engine.
 
