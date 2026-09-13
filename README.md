@@ -238,8 +238,10 @@ The backend is tested using 'pytest'.
 
 To run the test suite:
 
+```bash
 cd backend
 pytest
+```
 
 The tests cover core application functionality including:
 
