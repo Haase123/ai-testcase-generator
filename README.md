@@ -79,33 +79,40 @@ It allows users to enter software requirements, generate categorized test cases,
 
 ## Architecture
 
-The application is divided into a frontend and backend:
+The application is divided into a frontend and backend.
 
 The backend handles requirement processing, test case generation, analysis, persistence and exports.
 
 The frontend communicates with the backend through REST endpoints and provides the user interface for creating requirements, viewing generated test cases, analyzing results and exporting them.
 
-┌─────────────────────┐
-│   React Frontend    │
-│   TypeScript/Vite   │
-└──────────┬──────────┘
-           │ REST API
-           ▼
-┌─────────────────────┐
-│    FastAPI Backend  │
-├─────────────────────┤
-│ API / Endpoints     │
-│ Services            │
-│ Requirement Logic   │
-│ AI Integration      │
-└──────────┬──────────┘
-           │
-      ┌────┴─────┐
-      ▼          ▼
-┌──────────┐  ┌──────────────┐
-│ SQLite   │  │ OpenAI API   │
-│ Database │  │              │
-└──────────┘  └──────────────┘
+```mermaid
+flowchart LR
+    User --> Frontend
+
+    subgraph Frontend
+        React["React + TypeScript / Vite"]
+    end
+
+    subgraph Backend
+        API["FastAPI REST API"]
+        Services["Services"]
+        Logic["Requirement & Test Case Logic"]
+        AI["AI Integration"]
+    end
+
+    subgraph Data
+        DB["SQLite Database"]
+        OpenAI["OpenAI API"]
+    end
+
+    Frontend --> API
+    API --> Services
+    Services --> Logic
+    Services --> AI
+    Services --> DB
+    AI --> OpenAI
+    AI -. fallback .-> Logic
+```
 
 
 ## How It Works
@@ -135,6 +142,7 @@ The frontend indicates whether the generated result was produced using the OpenA
 
 ## Project Structure
 
+'''text
 ai-testcase-generator/
 ├── .github/
 │   └── workflows/
@@ -168,6 +176,7 @@ ai-testcase-generator/
 ├── .gitignore
 ├── README.md
 └── ...
+'''
 
 
 ## Setup
