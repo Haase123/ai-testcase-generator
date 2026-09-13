@@ -189,27 +189,31 @@ ai-testcase-generator/
 
 ### Clone the repository
 
+```bash
 git clone https://github.com/Haase123/ai-testcase-generator.git
 cd ai-testcase-generator
+```
 
 ### Backend
 
 Create and activate a virtual enviroment:
 
+```bash
 python -m venv .venv
+```
 
-On Windows PowerShell
+Activate the virtual enviroment and install the backend dependencies:
 
-.\.venv\Scripts\Activate.ps1
-
-Install the backend dependencies:
-
+```bash
 cd backend
 pip install -r requirements.txt
+```
 
 Start the backend:
 
+```bash
 uvicorn app.main:app --reload
+```
 
 The API will be available at:
 
@@ -223,9 +227,11 @@ http://127.0.0.1:8000/docs
 
 Open a second terminal and navigate to the frontend:
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 The frontend will be available at the URL shown by Vite, usually:
 
@@ -245,13 +251,13 @@ pytest
 
 The tests cover core application functionality including:
 
-Test case generation
-Requirement analysis
-API endpoints
-AI/fallback behavior
-Error handling
-Data export
-Status/health checks
+- Test case generation
+- Requirement analysis
+- API endpoints
+- AI/fallback behavior
+- Error handling
+- Data export
+- Status/health checks
 
 
 ## Continous Integration
